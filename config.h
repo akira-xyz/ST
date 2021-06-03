@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true";
-static char *font2[] = {"Liberation Mono:pixelsize=20:antialias=true:autohint=true"};
+static char *font = "Liberation Mono:pixelsize=18:antialias=true:autohint=true";
+static char *font2[] = {"Liberation Mono:pixelsize=18:antialias=true:autohint=true"};
 static int borderpx = 2;
 
 /*
@@ -95,35 +95,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.50;
+float alpha = 0.98;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	  /* 8 normal colors */
-  [0] = "#1c1c1c", /* black   */
-  [1] = "#ff005b", /* red     */
-  [2] = "#46E041", /* green   */
-  [3] = "#ffe755", /* yellow  */
-  [4] = "#048ac7", /* blue    */
-  [5] = "#833c9f", /* magenta */
-  [6] = "#0ac1cd", /* cyan    */
-  [7] = "#e5e5e5", /* white   */
-
+       "#2E3440", /* black   */
+       "#bf616a", /* red     */
+       "#a3be8c", /* green   */
+       "#ebcb8b", /* yellow  */
+       "#5E81AC", /* blue    */
+       "#b48ead", /* magenta */
+       "#88c0d0", /* cyan    */
+       "#e5e9f0", /* white   */ 
   /* 8 bright colors */
-  [8]  = "#666666", /* black   */
-  [9]  = "#ff00a0", /* red     */
-  [10] = "#83F380", /* green   */
-  [11] = "#ff9f00", /* yellow  */
-  [12] = "#48c6ff", /* blue    */
-  [13] = "#be67e1", /* magenta */
-  [14] = "#63e7f0", /* cyan    */
-  [15] = "#f3f3f3", /* white   */
-  [255] = 0,
+       "#4c566a", /* black   */
+       "#bf616a", /* red     */
+       "#a3be8c", /* green   */
+       "#ebcb8b", /* yellow  */
+       "#81a1c1", /* blue    */
+       "#b48ead", /* magenta */
+       "#8fbcbb", /* cyan    */
+       "#eceff4", /* white   */
+ 
+       [255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
+	"#E5E9F0",
+	"#d8dee9",
 };
 
 
@@ -132,7 +131,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
